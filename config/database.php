@@ -41,12 +41,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
+            'host' => getenv('MATATUDB_HOST', '127.0.0.1'),
+            'port' => getenv('MATATUDB_PORT', '3306'),
+            'database' => getenv('MATATUDB_DATABASE', 'forge'),
+            'username' => getenv('MATATUDB_USERNAME', 'forge'),
+            'password' => getenv('MATATUDB_PASSWORD', ''),
+            'unix_socket' => getenv('MATATUDB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
