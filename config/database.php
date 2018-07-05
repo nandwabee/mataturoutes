@@ -53,6 +53,20 @@ return [
             'strict' => true,
             'engine' => null,
         ],
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'host' => getenv('MONGODB_HOST'),
+            'port' => getenv('MONGODB_PORT'),
+            //'database' => env('MONGODB_DATABASE'),
+            'username' => env('MONGODB_USERNAME'),
+            'password' => env('MONGODB_PASSWORD'),
+            'options' => [
+                //'database' => 'admin'mongodb://heroku_srxnfrlt:7vcmh23lb8ui5qs0p21qn0c2po@ds257579.mlab.com:57579/heroku_srxnfrlt
+            ],
+            //'driver' => 'mongodb',
+            'dsn' => env('MONGODB_URI'),
+            'database' => env('MONGODB_DATABASE')
+        ],
 
         'pgsql' => [
             'driver' => 'pgsql',
