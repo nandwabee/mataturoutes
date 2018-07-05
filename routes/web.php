@@ -22,4 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
  * Admin Routes
  */
 Route::get('/admin','HomeController@admin')
-    ->name('admin');
+    ->name('admin')
+    ->middleware(['auth','admin']);
