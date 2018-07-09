@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-12 light-border-top">
-            <div class="editor-section-title">Dashboard</div>
+            <div class="editor-section-title">Manage Post</div>
         </div>
 
         <div class="col-12">
@@ -31,11 +31,13 @@
 
 <script>
     export default {
-        name:'dashboard',
+        name:'route',
         mounted() {
+
         },
         components:{},
         props: [
+            'route',
         ],
         data: function () {
             return {
@@ -46,7 +48,24 @@
 
         },
         methods: {
+            setactivetab: function (tab) {
+                console.log(tab)
+                this.activeTab = tab
+            },
+            fetch_route: function(id){
+                const vm = this;
 
+                axios.get('/route/' + id)
+                    .then(function (response) {
+
+                        console.log(response.data);
+
+                        vm.post = response.data;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
         }
     }
 </script>
