@@ -47316,6 +47316,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'routeeditor',
@@ -47333,6 +47340,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     computed: {},
     methods: {
+        openeditor: function openeditor() {
+            this.editor_open = true;
+        },
+        closeeditor: function closeeditor() {
+            this.editor_open = false;
+
+            console.log(this.route_id);
+        },
         setactivetab: function setactivetab(tab) {
             console.log(tab);
             this.activeTab = tab;
@@ -47361,8 +47376,76 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
     _vm.editor_open
-      ? _c("div", {}, [_c("span", [_vm._v("close")])])
-      : _c("div", {}, [_c("span", [_vm._v("edit")])])
+      ? _c("div", {}, [
+          _c(
+            "span",
+            {
+              on: {
+                click: function($event) {
+                  _vm.closeeditor()
+                }
+              }
+            },
+            [_vm._v("close")]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "route_number" } }, [
+                _vm._v("Route Number")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.route.route_number,
+                    expression: "route.route_number"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  name: "route_number",
+                  type: "text",
+                  id: "route_number",
+                  "aria-describedby": "route_number_help"
+                },
+                domProps: { value: _vm.route.route_number },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.route, "route_number", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "small",
+                {
+                  staticClass: "form-text text-muted",
+                  attrs: { id: "route_number_help" }
+                },
+                [_vm._v("The assigned route number.")]
+              )
+            ])
+          ])
+        ])
+      : _c("div", {}, [
+          _c(
+            "span",
+            {
+              on: {
+                click: function($event) {
+                  _vm.openeditor()
+                }
+              }
+            },
+            [_vm._v("edit")]
+          )
+        ])
   ])
 }
 var staticRenderFns = []
