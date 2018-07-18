@@ -12,6 +12,7 @@
                 </div>
 
                 <form class="" action="{{route('route.store')}}" method="post">
+                    {{csrf_field()}}
                      <div class="form-group">
                         <label for="route_number">Number</label>
                         <input name="route_number" type="text" class="form-control" id="route_number" aria-describedby="route_number_help" placeholder="Enter route number">
