@@ -21,8 +21,15 @@ Route::get('/home', 'HomeController@home')->name('home');
 /**
  * Route management
  */
+ Route::get('/route/{route_number}','Routes\RoutesController@show')
+     ->name('route.show');
+     
 Route::get('/admin/routes/add','Routes\RoutesController@create')
     ->name('route.add')
+    ->middleware(['auth','admin']);
+
+Route::post('/admin/routes','Routes\RoutesController@store')
+    ->name('route.store')
     ->middleware(['auth','admin']);
 
 /**

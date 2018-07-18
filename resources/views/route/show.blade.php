@@ -1,4 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    @endsection
+    {{$route->route_number}}
+@endsection
