@@ -25,7 +25,7 @@
                     </li>
                 @else
                     @if(auth()->user()->admin)
-                        <li><a class="nav-link" href="{{ route('route.new') }}">{{ __('Add Route') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('route.add') }}">{{ __('Add Route') }}</a></li>
                     @endif
 
                     <li class="nav-item dropdown">
