@@ -10411,6 +10411,10 @@ a.text-dark:focus {
   }
 }
 
+.dark {
+  background-color: #323643;
+}
+
 .navbar {
   background-color: #323643;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
