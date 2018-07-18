@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@home')->name('home');
  */
 Route::get('/admin/routes/add','Routes\RoutesController@create')
     ->name('route.add')
-    ->middleware(['auth','admin'])
+    ->middleware(['auth','admin']);
 
 /**
  * Admin Routes
