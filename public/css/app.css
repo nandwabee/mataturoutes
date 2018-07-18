@@ -10421,3 +10421,12 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.route_number {
+  background: #323643;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 800;
+}
+
