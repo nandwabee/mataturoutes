@@ -55,7 +55,7 @@ class RoutesController extends Controller
      * Show a route
      */
     public function show($route_number){
-        $route = $this->routemanager->find_by_route_number($route_number);
+        $route = $this->routemanager->find_by_route_number((string) $route_number);
 
         if($route){
             return view('route.show')->with(['route' => $route]);
