@@ -18,6 +18,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@home')->name('home');
 
+/**
+ * Route management
+ */
+Route::get('/admin/routes/add','Routes\RoutesController@create')
+    ->name('route.add')
+    ->middleware(['auth','admin'])
 
 /**
  * Admin Routes
