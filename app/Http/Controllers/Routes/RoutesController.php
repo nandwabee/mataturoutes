@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Routes;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Matatu\Route\RouteManager;
+use RouteNbi\Matatu\Route\RouteManager;
 
 class RoutesController extends Controller
 {

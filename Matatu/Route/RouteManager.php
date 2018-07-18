@@ -1,8 +1,8 @@
 <?php
 
-namespace Matatu\Route;
+namespace RouteNbi\Matatu\Route;
 
-use Matatu\Route\Data\Repo\RouteRepo;
+use RouteNbi\Matatu\Route\Data\Repo\RouteRepo;
 
 class RouteManager{
     protected $routerepo;

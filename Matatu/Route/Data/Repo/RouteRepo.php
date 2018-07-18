@@ -2,7 +2,7 @@
 
 namespace Matatu\Route\Data\Repo;
 
-use RouteNbi\Matatu\Route\MatatuRoute;
+use RouteNbi\Matatu\Route\Data\Models\MatatuRoute;
 
 class RouteRepo
 {

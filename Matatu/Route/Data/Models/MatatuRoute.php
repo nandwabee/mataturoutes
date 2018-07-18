@@ -1,6 +1,6 @@
 <?php
 
-namespace RouteNbi\Matatu\Route;
+namespace RouteNbi\Matatu\Route\Data\Models;
 
 use Jenssegers\Mongodb\Eloquent\Model;
 
