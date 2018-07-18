@@ -1,6 +1,6 @@
 <?php
 
-namespace Matatu\Route\Data\Repo;
+namespace RouteNbi\Matatu\Route\Data\Repo;
 
 use RouteNbi\Matatu\Route\Data\Models\MatatuRoute;
 
