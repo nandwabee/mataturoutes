@@ -27,6 +27,15 @@ class HomeController extends Controller
     }
 
     /**
+     * Redirect anyone who attempts to land on the /home page
+     *
+     * @return Redirect
+     */
+    public function home(){
+        return redirect(route('homepage'));
+    }
+
+    /**
      * Show the admin dashboard
      */
     public function admin(){
