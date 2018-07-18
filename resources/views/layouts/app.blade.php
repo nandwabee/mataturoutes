@@ -20,7 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body @yield('body_classes')>
     @include('layouts.partials.navbar')
         <main class="py-4">
             @yield('content')
