@@ -38,3 +38,14 @@ Route::post('/admin/routes','Routes\RoutesController@store')
 Route::get('/admin','HomeController@admin')
     ->name('admin')
     ->middleware(['auth','admin']);
+
+/**
+ * API routes. At the moment we use the default web auth.
+ *
+ * Accessible to the admin user only as of now.
+ *
+ * @todo implement api security using Laravel's tools
+ */
+Route::get('/api/v1/routes/{id}','API\v1\RoutesController@find')
+    ->name('admin')
+    ->middleware(['auth','admin']);

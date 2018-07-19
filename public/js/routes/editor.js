@@ -47341,6 +47341,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {},
     methods: {
         openeditor: function openeditor() {
+            this.fetch_route(this.route_id);
+
             this.editor_open = true;
         },
         closeeditor: function closeeditor() {
@@ -47355,7 +47357,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetch_route: function fetch_route(id) {
             var vm = this;
 
-            axios.get('/route/' + id).then(function (response) {
+            axios.get('/api/v1/routes/' + id).then(function (response) {
                 console.log(response.data);
 
                 vm.route = response.data;

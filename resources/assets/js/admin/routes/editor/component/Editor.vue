@@ -40,6 +40,8 @@
         },
         methods: {
             openeditor: function(){
+              this.fetch_route(this.route_id);
+
               this.editor_open = true;
             },
             closeeditor: function(){
@@ -54,7 +56,7 @@
             fetch_route: function(id){
                 const vm = this;
 
-                axios.get('/route/' + id)
+                axios.get('/api/v1/routes/' + id)
                     .then(function (response) {
                         console.log(response.data);
 
