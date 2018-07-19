@@ -5,8 +5,9 @@
 // Variables
 @import "variables";
 
-// Bootstrap
+// Vendors
 @import '~bootstrap/scss/bootstrap';
+@import '~mapbox-gl/dist/mapbox-gl.css';
 
 //MatatuRoutes
 @import 'mataturoute/layouts';

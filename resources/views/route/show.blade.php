@@ -7,6 +7,7 @@
 @endsection
 
 @section('scripts')
+    <script type="text/javascript" src="{{ asset('js/routes.js') }}"></script>
     @if (auth()->check())
         @if (auth()->user()->admin)
             <script type="text/javascript" src="{{ asset('js/routes/editor.js') }}"></script>
@@ -30,7 +31,7 @@
                         </div>                        
                     @endif
                 @endif
-                <div class="routemap">
+                <div class="routemap" id="routemap">
                     This is a placeholder for the map
                 </div>
                 This is the right part of the route page
