@@ -47253,7 +47253,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibmFuZHdhYmVlIiwiYSI6ImNqMGp5MXh1ejAwMW0zM3MyN
 
 var map = new mapboxgl.Map({
     container: 'routemap',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/nandwabee/cjjs7nulq1xtl2ro1l091qbx6'
 });
 
 /***/ }),
