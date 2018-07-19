@@ -31,9 +31,7 @@
                         </div>                        
                     @endif
                 @endif
-                <div class="routemap" id="routemap">
-                    This is a placeholder for the map
-                </div>
+                <div class="routemap" id="routemap"></div>
                 This is the right part of the route page
             </div>
         </div>

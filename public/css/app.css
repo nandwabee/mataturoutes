@@ -10933,6 +10933,10 @@ a.text-dark:focus {
   font-weight: 800;
 }
 
+#routemap {
+  min-height: 400px;
+}
+
 .standard-padding {
   padding: 10px;
 }
