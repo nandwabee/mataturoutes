@@ -7,7 +7,7 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript" src="{{ asset('js/routes.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/route.js') }}"></script>
     @if (auth()->check())
         @if (auth()->user()->admin)
             <script type="text/javascript" src="{{ asset('js/routes/editor.js') }}"></script>
