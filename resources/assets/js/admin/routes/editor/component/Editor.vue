@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12">
             <div class="" v-if="editor_open">
-                <span v-on:click="close_editor()">close</span>
+                <span v-on:click="close_editor()" class="pointer">close</span>
                 <div class="form-group">
                     <div class="form-group">
                         <label for="route_number">Route Number</label>
@@ -14,7 +14,7 @@
             </div>
 
             <div class="" v-else>
-                <span v-on:click="open_editor()">edit</span>
+                <span v-on:click="open_editor()" class="pointer">edit</span>
             </div>
         </div>
     </div>

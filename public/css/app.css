@@ -10430,3 +10430,11 @@ a.text-dark:focus {
   font-weight: 800;
 }
 
+.standard-padding {
+  padding: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+

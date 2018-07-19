@@ -25,7 +25,7 @@
             <div class="col-8">
                 @if (auth()->check())
                     @if (auth()->user()->admin)
-                        <div class="bg-white" id="route_editor">
+                        <div class="bg-white standard-padding" id="route_editor">
                             <routeeditor route_id="{{$route->id}}"></routeeditor>
                         </div>                        
                     @endif

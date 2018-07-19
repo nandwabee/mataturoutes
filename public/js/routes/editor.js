@@ -47386,6 +47386,7 @@ var render = function() {
             _c(
               "span",
               {
+                staticClass: "pointer",
                 on: {
                   click: function($event) {
                     _vm.close_editor()
@@ -47443,6 +47444,7 @@ var render = function() {
             _c(
               "span",
               {
+                staticClass: "pointer",
                 on: {
                   click: function($event) {
                     _vm.open_editor()
