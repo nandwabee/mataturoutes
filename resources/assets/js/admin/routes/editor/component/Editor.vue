@@ -1,18 +1,21 @@
 <template>
     <div class="row">
-        <div class="" v-if="editor_open">
-            <span v-on:click="closeeditor()">close</span>
-            <div class="form-group">
+        <div class="col-12">
+            <div class="" v-if="editor_open">
+                <span v-on:click="close_editor()">close</span>
                 <div class="form-group">
-                    <label for="route_number">Route Number</label>
-                    <input name="route_number" type="text" class="form-control" id="route_number"
-                           aria-describedby="route_number_help" v-model="route.route_number">
-                    <small id="route_number_help" class="form-text text-muted">The assigned route number.</small>
+                    <div class="form-group">
+                        <label for="route_number">Route Number</label>
+                        <input name="route_number" type="text" class="form-control" id="route_number"
+                               aria-describedby="route_number_help" v-model="route.route_number">
+                        <small id="route_number_help" class="form-text text-muted">The assigned route number.</small>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="" v-else>
-            <span v-on:click="openeditor()">edit</span>
+
+            <div class="" v-else>
+                <span v-on:click="open_editor()">edit</span>
+            </div>
         </div>
     </div>
 </template>
@@ -36,16 +39,13 @@
         },
         computed: {},
         methods: {
-            openeditor: function () {
-                console.log(this.route_id);
+            open_editor: function () {
                 this.fetch_route(this.route_id);
 
                 this.editor_open = true;
             },
-            closeeditor: function () {
+            close_editor: function () {
                 this.editor_open = false;
-
-                console.log(this.route_id);
             },
             setactivetab: function (tab) {
                 console.log(tab)
