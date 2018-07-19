@@ -3,57 +3,55 @@
         <div class="" v-if="editor_open">
             <span v-on:click="closeeditor()">close</span>
             <div class="form-group">
-              <div class="form-group">
-                   <label for="route_number">Route Number</label>
-                   <input name="route_number" type="text" class="form-control" id="route_number" aria-describedby="route_number_help" v-model="route.route_number">
-                   <small id="route_number_help" class="form-text text-muted">The assigned route number.</small>
-              </div>
+                <div class="form-group">
+                    <label for="route_number">Route Number</label>
+                    <input name="route_number" type="text" class="form-control" id="route_number"
+                           aria-describedby="route_number_help" v-model="route.route_number">
+                    <small id="route_number_help" class="form-text text-muted">The assigned route number.</small>
+                </div>
             </div>
         </div>
         <div class="" v-else>
-          <span v-on:click="openeditor()">edit</span>
+            <span v-on:click="openeditor()">edit</span>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name:'routeeditor',
+        name: 'routeeditor',
         mounted() {
             console.log('Route editor mounted.');
         },
-        components:{
-
-        },
+        components: {},
         props: [
-            'route',
             'route_id',
         ],
         data: function () {
             return {
                 active_tab: 'basics',
-                editor_open: false
+                editor_open: false,
+                route:{}
             }
         },
-        computed: {
-
-        },
+        computed: {},
         methods: {
-            openeditor: function(){
-              this.fetch_route(this.route_id);
+            openeditor: function () {
+                console.log(this.route_id);
+                this.fetch_route(this.route_id);
 
-              this.editor_open = true;
+                this.editor_open = true;
             },
-            closeeditor: function(){
-              this.editor_open = false;
+            closeeditor: function () {
+                this.editor_open = false;
 
-              console.log(this.route_id);
+                console.log(this.route_id);
             },
             setactivetab: function (tab) {
                 console.log(tab)
                 this.activeTab = tab
             },
-            fetch_route: function(id){
+            fetch_route: function (id) {
                 const vm = this;
 
                 axios.get('/api/v1/routes/' + id)

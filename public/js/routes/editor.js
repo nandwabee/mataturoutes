@@ -47323,6 +47323,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'routeeditor',
@@ -47331,16 +47332,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     components: {},
-    props: ['route', 'route_id'],
+    props: ['route_id'],
     data: function data() {
         return {
             active_tab: 'basics',
-            editor_open: false
+            editor_open: false,
+            route: {}
         };
     },
     computed: {},
     methods: {
         openeditor: function openeditor() {
+            console.log(this.route_id);
             this.fetch_route(this.route_id);
 
             this.editor_open = true;
