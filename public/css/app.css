@@ -10915,7 +10915,7 @@ a.text-dark:focus {
 }
 
 .dark {
-  background-color: #323643;
+  background-color: #343332;
 }
 
 .navbar {
@@ -10925,7 +10925,7 @@ a.text-dark:focus {
 }
 
 .route_number {
-  background: #323643;
+  background: #343332;
   color: white;
   padding: 10px;
   text-align: center;
