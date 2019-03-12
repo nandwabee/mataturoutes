@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('body_classes')dark @endsection
+@section('body_classes') light @endsection
 
 @section('content')
     <div class="hero container-fluid">

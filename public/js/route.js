@@ -47247,7 +47247,7 @@ var app = new Vue({
     el: '#route'
 });
 
-var mapboxgl = __webpack_require__(55);
+var mapboxgl = __webpack_require__(46);
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibmFuZHdhYmVlIiwiYSI6ImNqMGp5MXh1ejAwMW0zM3MyNTJ5YTgxejYifQ.x7sLashFo11lBNK8qUZdQQ';
 
@@ -47486,16 +47486,7 @@ if (false) {
 }
 
 /***/ }),
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* Mapbox GL JS is licensed under the 3-Clause BSD License. Full text of license: https://github.com/mapbox/mapbox-gl-js/blob/v0.47.0/LICENSE.txt */
